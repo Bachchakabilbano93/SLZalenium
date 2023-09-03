@@ -51,7 +51,7 @@ public class StepDefinitions {
 		
 		try {
 //			driver = new RemoteWebDriver(new URL("http://3.90.255.127:4444/wd/hub"), options);
-			driver = new RemoteWebDriver(new URL("http://107.22.20.195:4444/wd/hub"), caps);
+			driver = new RemoteWebDriver(new URL("http://52.90.227.165:4444/wd/hub"), caps);
 			Obj = new AutomasiPO(driver);
 			Thread.sleep(3000);
 			driver.manage().window().maximize();
