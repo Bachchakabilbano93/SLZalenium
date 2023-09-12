@@ -35,23 +35,23 @@ public class StepDefinitions {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
 
-		caps.setCapability("zal:name", "testaba2 ");
-		caps.setCapability("zal:tz", "Europe/Berlin");
-		caps.setCapability("zal:recordVideo", "true");
-		caps.setCapability("zal:screenResolution", "1920x1058");
+//		caps.setCapability("zal:name", "testaba2 ");
+//		caps.setCapability("zal:tz", "Europe/Berlin");
+//		caps.setCapability("zal:recordVideo", "true");
+//		caps.setCapability("zal:screenResolution", "1920x1058");
 //		caps.setCapability("zal:idleTimeout", 180);
 		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("disable-infobars"); // disabling infobars
-//		options.addArguments("--disable-extensions"); // disabling extensions
-//		options.addArguments("--disable-gpu"); // applicable to windows os only
-//		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-//		options.addArguments("--no-sandbox"); // Bypass OS security model
+		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-gpu"); // applicable to windows os only
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox"); // Bypass OS security model
 //		options.addArguments("--headless"); // Bypass OS security model
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
 		
 		try {
-//			driver = new RemoteWebDriver(new URL("http://3.90.255.127:4444/wd/hub"), options);
-			driver = new RemoteWebDriver(new URL("http://18.212.122.97:4444/wd/hub"), caps);
+//			driver = new RemoteWebDriver(new URL("http://3.91.105.233:4444/wd/hub"), options);
+			driver = new RemoteWebDriver(new URL("http://3.91.105.233:4444/wd/hub"), caps);
 			Obj = new AutomasiPO(driver);
 			Thread.sleep(3000);
 			driver.manage().window().maximize();
